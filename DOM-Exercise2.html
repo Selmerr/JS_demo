@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .my-div {width: 25px; height: 25px;background-color:red; margin:1px;}
+      </style>
+</head>
+<body>
+    <div id="outer">
+        <div id="d1" class="my-div"></div>
+        <div id="d2" class="my-div"></div>
+        <div id="d3" class="my-div"></div>
+        <div id="d4" class="my-div"></div>
+        <div id="d5" class="my-div"></div>
+        <div id="d6" class="my-div"></div>
+        <div id="d7" class="my-div"></div>
+        <div id="d8" class="my-div"></div>
+        <div id="d9" class="my-div"></div>
+        <div id="d10" class="my-div"></div>
+        <div id="d11" class="my-div"></div>
+        <div id="d12" class="my-div"></div>
+        <p id = "p1"></p>
+    </div>
+        
+    <script>
+        // const sayHi = function(elementId) {
+        //     return function() {
+        //         console.log("Hi from " + elementId);
+        //     }
+        // }
+        // const divs = document.querySelectorAll("div")
+        // document.getElementById("d1").addEventListener("click", sayHi("d1"));
+        // document.getElementById("d2").addEventListener("click", sayHi("d2"));
+        const getTarget = function(event) {
+            const target = event.target
+            let text = "Hi from " + target.id
+            document.querySelector("#p1").innerText = text
+        }
+        // //Nested functions?
+        // document.getElementById("d1").addEventListener("click", function() { console.log("Hi from div1's button")})
+        // document.getElementById("d2").addEventListener("click", function() { console.log("Hi from div2's button")})
+        document.getElementById("outer").addEventListener("click", getTarget)
+
+        
+
+    </script>
+</body>
+    </html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="car-selector">
+        <!-- Options will be populated by JavaScript -->
+      </select>
+      <h2>Selected Brand</h2>
+      <h4 id="car-make"></h4>
+      
+      <script>
+      const cars = ["Ford", "VW", "Toyota", "Volvo"]; //Assume this was fetched from the backend
+      document.querySelector("#car-selector")
+      for (let i = 0; i<cars.length; i++) {
+        const newNode = document.createElement("option")
+        newNode.innerText = cars[i]
+        newNode.value = cars[i]
+        document.querySelector("#car-selector").appendChild(newNode)
+      }
+
+      document.querySelector("#car-selector").addEventListener("change", function(event) 
+      {document.querySelector("#car-make").innerText = event.target.value})
+      </script>
+</body>
+</html>

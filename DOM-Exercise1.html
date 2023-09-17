@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="d1" style="width: 100px;margin: 1px;">&nbsp;</div>
+    <div id="d2" style="width: 100px;margin: 1px;">&nbsp;</div>
+    <div id="d3" style="width: 100px;margin: 1px;">&nbsp;</div>
+    <button id="bt1">COLOURS!</button>
+    
+    <script>
+        const divs = document.querySelectorAll("div")
+        for (let i=0; i<divs.length; i++) {
+            divs[i].style.backgroundColor = "green"
+        }
+        
+        RandomColors = function() {
+                for (let i=0; i<divs.length; i++) {
+                R = Math.floor(Math.random()*256)
+                G = Math.floor(Math.random()*256)
+                B = Math.floor(Math.random()*256)
+                divs[i].style.backgroundColor = "rgb("+R+","+G+","+B+")"}
+        }
+        document.getElementById("bt1").addEventListener("click", RandomColors)
+    </script>
+</body>
+</html>
