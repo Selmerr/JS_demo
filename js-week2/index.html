@@ -16,5 +16,25 @@
     <div id="userInfo">
 
     </div>
+
+    <div>
+        <p>
+            What is a promise,
+                As I understand a promise is a way to say "IF this is resolved, THEN do this with the results". Not sure if 
+                its a function or an object. I definitely need to read up on it.
+
+            What does the fetch method return
+                It returns a promise
+
+            Why do we need to have two .then callbacks with our fetch code?
+                Because the first then callback deals with if we were successful in fetching the data, and the second one deals with extracting and using that data.
+
+            What can and should you do in the first?
+                Put it in a try-catch to make sure we get a 200 response.
+
+            What can and should you do in the last?
+                Not sure. Maybe further error handling so we are sure the data we get is what we expected
+            </p>
+    </div>
 </body>
 </html>
