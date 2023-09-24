@@ -12,7 +12,9 @@
             <th>ID</th><th>Year</th><th>Make</th><th>Model</th><th>Price</th>
         </tr>
         </thead>
-        <tbody id="tbody"></tbody>
+        <tbody id="tbody">
+
+        </tbody>
     </table>
     
     <script>
@@ -24,6 +26,16 @@
         { id: 5, year: 2005, make: 'Volvo', model: 'V70', price: 44799 }
         ];
 
+        const CarRow = cars.map(car=> {
+            return `<tr>
+                    <td>${car.id}</td>
+                    <td>${car.year}</td>
+                    <td>${car.make}</td>
+                    <td>${car.model}</td>
+                    <td>${car.price}</td>
+                    </tr>`}).
+                    join('');
+        document.querySelector("#tbody").innerHTML = CarRow
     </script>
 </body>
 </html>
